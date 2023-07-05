@@ -80,18 +80,18 @@ After doing these steps, you can run the script by typing:
 or by double-clicking it on Mac.
 
 ## Usage
-To use wasi-sdk, you normally need to use commands like `gcc` or `g++`, for example:
+To use wasi-sdk, you normally need to use commands like `clang` or `clang++`, for example:
 
 ```
-gcc hello.c -o hello.exe
-.\hello.exe
+clang hello.c -o hello.wasm
+wasmtime hello.wasm
 ``` 
 
 or 
 
 ```
-g++ .\hello.cpp -o .\hello.exe
-.\hello.exe
+clang++ hello.cpp -o hello.wasm
+wasmtime hello.wasm
 ```
 
 These commands compile your C or C++ code to WebAssembly and generate an HTML file that can run it in a browser.
